@@ -4,7 +4,7 @@ import { FaShoppingCart, FaUser } from "react-icons/fa";
 const Header = () => {
   return (
     <header>
-      <Navbar bg="dark" variant="dark" expand="md" collapseOnSelect>
+      <Navbar className="navbar-orange" expand="md" collapseOnSelect>
         <Container>
           <Navbar.Brand href="/">RushKart</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
