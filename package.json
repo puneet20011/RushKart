@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/puneet20011/RuskKart#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0"
   },
   "devDependencies": {
     "concurrently": "^9.2.0",
