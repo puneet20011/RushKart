@@ -1,0 +1,31 @@
+{
+  "name": "rushkart",
+  "version": "1.0.0",
+  "description": "eCommerce application built with MERN ",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puneet20011/RuskKart.git"
+  },
+  "author": "Puneet Singh Puri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/puneet20011/RuskKart/issues"
+  },
+  "homepage": "https://github.com/puneet20011/RuskKart#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "dotenv": "^17.2.1",
+    "nodemon": "^3.1.10"
+  }
+}
