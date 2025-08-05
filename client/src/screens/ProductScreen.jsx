@@ -20,7 +20,7 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Link className="btn btn-orange my-3" to="/">
+      <Link className="btn btn-red my-3" to="/">
         Go Back
       </Link>
       <Row>
@@ -66,7 +66,7 @@ const ProductScreen = () => {
 
               <ListGroup.Item>
                 <Button
-                  className="btn-block btn-orange"
+                  className="btn-block btn-red"
                   type="button"
                   disabled={product.countInStock === 0}
                 >

@@ -1,18 +1,40 @@
-/* Custom orange button */
-.btn-orange {
-  background-color: orange !important;
-  border-color: orange !important;
+/* RushKart logo style */
+.navbar-brand.rushkart-logo {
+  font-family: 'Lilita One', cursive !important;
+  letter-spacing: 1px;
+  font-size: 2rem !important;
+  color: #111 !important;
+  font-weight: 900 !important;
+  transition: color 0.2s;
+}
+
+/* Navbar links and logo: black by default, white on hover/click, revert to black after */
+.navbar-red .nav-link,
+.navbar-red .navbar-brand.rushkart-logo {
+  color: #111 !important;
+  transition: color 0.2s;
+}
+.navbar-red .nav-link:hover,
+.navbar-red .nav-link:focus,
+.navbar-red .navbar-brand.rushkart-logo:hover,
+.navbar-red .navbar-brand.rushkart-logo:focus {
+  color: #fff !important;
+}
+/* Custom red button */
+.btn-red {
+  background-color: #e74c3c !important;
+  border-color: #e74c3c !important;
   color: white !important;
 }
-/* Optional: darker orange on hover */
-.btn-orange:hover, .btn-orange:focus {
-  background-color: #ff8800 !important;
-  border-color: #ff8800 !important;
+/* Optional: darker red on hover */
+.btn-red:hover, .btn-red:focus {
+  background-color: #c0392b !important;
+  border-color: #c0392b !important;
   color: white !important;
 }
-/* Custom orange navbar */
-.navbar-orange {
-  background-color: orange !important;
+/* Custom red navbar */
+.navbar-red {
+  background-color: #e74c3c !important;
 }
 main {
   min-height: 80vh;
