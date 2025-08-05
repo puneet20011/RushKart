@@ -1,3 +1,15 @@
+/* Custom orange button */
+.btn-orange {
+  background-color: orange !important;
+  border-color: orange !important;
+  color: white !important;
+}
+/* Optional: darker orange on hover */
+.btn-orange:hover, .btn-orange:focus {
+  background-color: #ff8800 !important;
+  border-color: #ff8800 !important;
+  color: white !important;
+}
 /* Custom orange navbar */
 .navbar-orange {
   background-color: orange !important;
