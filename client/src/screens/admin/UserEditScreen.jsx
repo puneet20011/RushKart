@@ -46,7 +46,7 @@ const UserEditScreen = () => {
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }
-  };
+  };  
 
   return (
     <>
