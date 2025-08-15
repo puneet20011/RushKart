@@ -1,17 +1,36 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button } from "react-bootstrap";
-import { FaTimes } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { FaTimes, FaTrash } from "react-icons/fa";
 import Message from "../../components/Message";
 import Loader from "../../components/Loader";
-import { useGetOrdersQuery } from "../../slices/ordersApiSlice";
+import {
+  useGetOrdersQuery,
+  useDeleteOrderMutation,
+} from "../../slices/ordersApiSlice";
 
 const OrderListScreen = () => {
-  const { data: orders, isLoading, error } = useGetOrdersQuery();
+  const { data: orders, isLoading, error, refetch } = useGetOrdersQuery();
+
+  const [deleteOrder, { isLoading: loadingDelete }] = useDeleteOrderMutation();
+
+  const deleteHandler = async (id) => {
+    if (window.confirm("Are you sure you want to delete this order?")) {
+      try {
+        await deleteOrder(id);
+        toast.success("Order deleted");
+        refetch();
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    }
+  };
 
   return (
     <>
       <h1>Orders</h1>
+      {loadingDelete && <Loader />}
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -55,6 +74,12 @@ const OrderListScreen = () => {
                   <LinkContainer to={`/order/${order._id}`}>
                     <Button className="btn-sm btn-red">Details</Button>
                   </LinkContainer>
+                  <Button
+                    className="btn-sm btn-red mx-2"
+                    onClick={() => deleteHandler(order._id)}
+                  >
+                    <FaTrash />
+                  </Button>
                 </td>
               </tr>
             ))}
