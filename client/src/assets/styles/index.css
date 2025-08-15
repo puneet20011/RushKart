@@ -26,6 +26,32 @@
   border-color: #e74c3c !important;
   color: white !important;
 }
+/* custom.css */
+
+/* Normal state */
+.btn-outline-dark {
+  color: black;
+  border-color: black;
+  background-color: transparent; /* Ensure it's transparent by default */
+}
+
+/* Hover / Focus / Active */
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active,
+.btn-outline-dark.active {
+  background-color: black; /* Fill with color */
+  color: white;
+  border-color: black;
+}
+
+
+/* Custom black button */
+.btn-black {
+  background-color: black !important;
+  border-color: black !important;
+  color: white !important;
+}
 /* Optional: darker red on hover */
 .btn-red:hover, .btn-red:focus {
   background-color: #c0392b !important;
