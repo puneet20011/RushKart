@@ -67,7 +67,7 @@ const OrderScreen = () => {
       } catch (err) {
         toast.error(err?.data?.message || err.message);
       }
-    });
+    }); 
   }
 
   // async function onApproveTest() {
