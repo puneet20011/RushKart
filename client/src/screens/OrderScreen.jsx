@@ -68,7 +68,7 @@ const OrderScreen = () => {
         toast.error(err?.data?.message || err.message);
       }
     }); 
-  }
+  } 
 
   // async function onApproveTest() {
   //   await payOrder({ orderId, details: { payer: {} } });
