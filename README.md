@@ -1,1 +1,1 @@
-RushKart - An online e-commerce website made using MERN stack 
+RushKart - An online e-commerce website made using MERN stack.
