@@ -1,1 +1,1 @@
-RushKart - An online e-commerce
+RushKart - An online e-commerce website 
